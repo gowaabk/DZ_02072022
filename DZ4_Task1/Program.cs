@@ -13,5 +13,12 @@ int Prompt(string message)  //Ввод числа с приглашением
 
 int numberA = Prompt("Введите число A ->");
 int numberB = Prompt("Введите число B ->");
-
-System.Console.WriteLine($"Число {numberA} в степени {numberB} = {Math.Pow(numberA, numberB)}");
+int numB = numberB; //переменнная только для вывода ввеленного числа В
+int Mult = 1;
+while (numberB > 0)
+{
+    Mult = Mult * numberA;
+    numberB--;
+}
+//System.Console.WriteLine($"Число {numberA} в степени {numberB} = {Math.Pow(numberA, numberB)}");
+System.Console.WriteLine($"Число {numberA} в степени {numB} = {Mult}");
